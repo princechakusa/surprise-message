@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surprise Message</title>
+  <style>
+    body {
+      background: #f0f8ff;
+      text-align: center;
+      padding-top: 100px;
+      font-family: 'Segoe UI', sans-serif;
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #444;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .balloon {
+      width: 60px;
+      height: 80px;
+      background-color: #ff4d4d;
+      border-radius: 50% 50% 45% 45%;
+      position: absolute;
+      bottom: -100px;
+      animation: floatUp 6s infinite ease-in-out;
+    }
+
+    .balloon::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background: black;
+      transform: translateX(-50%);
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-120vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hey babe, where are you and what time are you reaching home?</h1>
+  <div class="balloon" style="left: 10%; background-color: #f77;"></div>
+  <div class="balloon" style="left: 30%; background-color: #7cf;"></div>
+  <div class="balloon" style="left: 50%; background-color: #fc7;"></div>
+  <div class="balloon" style="left: 70%; background-color: #9f7;"></div>
+  <div class="balloon" style="left: 90%; background-color: #d7f;"></div>
+</body>
+</html>
+Add surprise HTML message with balloons
